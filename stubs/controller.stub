@@ -1,0 +1,34 @@
+<?php
+
+namespace Modules\{{ name }}\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class {{ name }}Controller extends Controller
+{
+    public function index()
+    {
+        return response()->json(['message' => '{{ name }} index']);
+    }
+
+    public function store(Request $request)
+    {
+        return response()->json(['message' => '{{ name }} created']);
+    }
+
+    public function show($id)
+    {
+        return response()->json(['message' => '{{ name }} details', 'id' => $id]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        return response()->json(['message' => '{{ name }} updated', 'id' => $id]);
+    }
+
+    public function destroy($id)
+    {
+        return response()->json(['message' => '{{ name }} deleted', 'id' => $id]);
+    }
+}
