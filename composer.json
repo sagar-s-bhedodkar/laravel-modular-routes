@@ -26,5 +26,15 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "support": {
+        "issues": "https://github.com/sagar-s-bhedodkar/laravel-modular-routes/issues",
+        "source": "https://github.com/sagar-s-bhedodkar/laravel-modular-routes"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/sagar-s-bhedodkar/laravel-modular-routes"
+        }
+    ]
 }
