@@ -57,7 +57,7 @@ The routes and controllers are automatically generated and ready for use.
 Require the package via Composer:
 
 ```bash
-composer require sagar-s-bhedodkar/laravel-modular-routes:@dev
+composer require sagar-s-bhedodkar/modular-routes:@dev
 ```
 
 The package auto-discovers itself; no manual registration is required.
