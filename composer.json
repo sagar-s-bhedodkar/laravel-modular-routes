@@ -1,5 +1,5 @@
 {
-    "name": "sagar-s-bhedodkar/modular-routes",
+    "name": "sagar-s-bhedodkar/laravel-modular-routes",
     "description": "Easily manage modular routes in Laravel projects — automatically generate, organize, and load module routes and controllers. Keep your application clean, scalable, and production-ready with minimal setup. Each module can have its own routes, controllers, views, and tests, making large applications easier to maintain. Automatically detects and registers module routes without manual imports, saving development time. Ideal for teams, enterprise projects, and developers who want a professional, modular Laravel architecture.",
     "type": "library",
     "license": "MIT",
