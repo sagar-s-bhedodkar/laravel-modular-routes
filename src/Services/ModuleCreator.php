@@ -82,6 +82,7 @@ class ModuleCreator
         // Create folder structure for Routes and Controllers with proper permissions
         $this->files->makeDirectory("{$path}/Routes", 0755, true);
         $this->files->makeDirectory("{$path}/Http/Controllers", 0755, true);
+        $this->files->makeDirectory("{$path}/Providers", 0755, true);
 
         // Generate API route file using stub
         $this->files->put("{$path}/Routes/api.php", $this->getStub('api', $name));
@@ -91,6 +92,13 @@ class ModuleCreator
 
         // Generate default CRUD controller using stub
         $this->files->put("{$path}/Http/Controllers/{$name}Controller.php", $this->getStub('controller', $name));
+
+        // Generate ServiceProvider using stub
+        $this->files->put("{$path}/Providers/{$name}ServiceProvider.php", $this->getStub('serviceprovider', $name));
+
+        // Generate composer.json using stub
+        $this->files->put("{$path}/composer.json", $this->getStub('composer', $name));
+
     }
 
     /**

@@ -1,0 +1,17 @@
+{
+    "name": "vendor/{{ name | strtolower }}",
+    "description": "Laravel module {{ name }}",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Modules\\{{ name }}\\": ""
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\{{ name }}\\Providers\\{{ name }}ServiceProvider"
+            ]
+        }
+    }
+}

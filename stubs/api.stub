@@ -3,10 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Modules\{{ name }}\Http\Controllers\{{ name }}Controller;
 
-Route::prefix('{{ name | strtolower }}')->group(function () {
-    Route::get('/', [{{ name }}Controller::class, 'index']);       // List
-    Route::post('/', [{{ name }}Controller::class, 'store']);      // Create
-    Route::get('/{id}', [{{ name }}Controller::class, 'show']);   // Show
-    Route::put('/{id}', [{{ name }}Controller::class, 'update']); // Update
-    Route::delete('/{id}', [{{ name }}Controller::class, 'destroy']); // Delete
-});
+Route::get('/', [{{ name }}Controller::class, 'index']);       // List
+Route::post('/', [{{ name }}Controller::class, 'store']);      // Create
+Route::get('/{id}', [{{ name }}Controller::class, 'show']);   // Show
+Route::put('/{id}', [{{ name }}Controller::class, 'update']); // Update
+Route::delete('/{id}', [{{ name }}Controller::class, 'destroy']); // Delete

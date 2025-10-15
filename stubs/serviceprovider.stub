@@ -1,0 +1,28 @@
+<?php
+
+namespace Modules\{{ name }}\Providers;
+
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Route;
+
+class {{ name }}ServiceProvider extends ServiceProvider
+{
+    public function boot(): void
+    {
+        $this->registerRoutes();
+    }
+
+    protected function registerRoutes(): void
+    {
+        if (file_exists(__DIR__ . '/../Routes/api.php')) {
+            Route::middleware('api')
+                 ->prefix('api')
+                 ->group(__DIR__ . '/../Routes/api.php');
+        }
+
+        if (file_exists(__DIR__ . '/../Routes/web.php')) {
+            Route::middleware('web')
+                 ->group(__DIR__ . '/../Routes/web.php');
+        }
+    }
+}
